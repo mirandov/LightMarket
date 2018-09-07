@@ -1,0 +1,33 @@
+.line
+.content
+  .sport-your
+    / requried-jsfiles-for owl
+    -# %link{:href => "css/owl.carousel.css", :rel => "stylesheet"}/
+    -# %script{:src => "js/owl.carousel.js"}
+    -# :javascript
+    -#   $(document).ready(function() {
+    -#     $("#owl-demo").owlCarousel({
+    -#       items : 5,
+    -#       lazyLoad : true,
+    -#       autoPlay : true,
+    -#       navigation : true,
+    -#       navigationText :  true,
+    -#       pagination : false,
+    -#     });
+    -#   });
+    -# / //requried-jsfiles-for owl
+    -# / start content_slider
+
+    #example1
+      #owl-demo.owl-carousel.text-center
+        .item
+          %a{:href => "single.html", :rel => "title1", :title => "image"}
+            %img.img-responsive{:alt => "", :src => "images/pic.jpg"}/
+            .run
+              %i
+              %p RUNNING
+
+
+
+    %h6.your-in Your sport
+    .line2

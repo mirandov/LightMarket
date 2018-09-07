@@ -1,0 +1,51 @@
+- @categories = Category.all
+.line
+.header
+  .logo
+    %img= image_tag('logo2.png')
+  .header-top
+    .header-grid
+      %ul.header-in
+        %li
+          %a{:href => "account.html"} Мой аккаунт
+        %li
+          -# %select.in-drop
+            %option.in-of{:value => "Dollars"}
+            %option.in-of{:value => "Euro"}
+            %option.in-of{:value => "Yen"}
+      .search-box
+        #sb-search.sb-search
+          %form
+            %input#search.sb-search-input{:name => "search", :placeholder => "Enter your search term...", :type => "search"}/
+            %input.sb-search-submit{:type => "submit", :value => ""}/
+            %span
+      / search-scripts
+
+      / //search-scripts
+      .online
+        %a{:href => "single.html"} Купить сейчас
+      .clearfix
+    .header-bottom
+      .h_menu4
+        %a
+        %ul.nav
+          - @categories.each do |c|
+            %li.active
+              %a= c.name
+
+
+        %script{:src => "js/nav.js", :type => "text/javascript"}
+      / end h_menu4
+      %ul.header-bottom-in
+        %li
+          -# %select.drop
+            %option.in-of{:value => "Dollars"}
+            %option.in-of{:value => "Euro"}
+            %option.in-of{:value => "Yen"}
+        %li
+          -# %select.drop
+            %option.in-of{:value => "Dollars"}
+            %option.in-of{:value => "Euro"}
+            %option.in-of{:value => "Yen"}
+      .clearfix
+  .clearfix
