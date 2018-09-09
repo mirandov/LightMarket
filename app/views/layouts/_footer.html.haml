@@ -8,9 +8,10 @@
       .col-md-5.ftr-grid
         %h3 Категории
         %ul.nav-bottom
-          - @categories.each do |c|
-            %li.active
-              %a= c.name
+          - if @categories.present?
+            - @categories.each do |c|
+              %li.active
+                %a= c.name
       .col-md-3.ftr-grid
         %h3 Информация
         %ul.nav-bottom
