@@ -17,6 +17,7 @@ sc4   = Subcategory.create!(name: 'Декоративные ели', category: c
 
 p1    = Product.create!(name: 'Световая LED',
 size: '20 м',
+description: 'Описание',
 color_light: 'Зеленая',
 price: 2000,
 subcategory: sc1)
@@ -24,18 +25,21 @@ subcategory: sc1)
 
 p2    = Product.create!(name: 'Ароматическая свеча NYX',
 size: '20 см',
+description: 'Описание',
 color_light: 'Красная',
 price: 1500,
 subcategory: sc2)
 
 p3    = Product.create!(name: 'Снеговик ',
 size: '2 м',
+description: 'Описание',
 color_light: 'Белый',
 price: 6000,
 subcategory: sc3)
 
 p4    = Product.create!(name: 'Елка новогодняя',
 size: '1,5 м',
+description: 'Описание',
 color_light: 'Зеленая',
 price: 1000,
 subcategory: sc4)
