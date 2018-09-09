@@ -4,7 +4,10 @@
       .top-sing
         .col-md-7.single-top
           %ul.slides
-            %img= image_tag(@product.avatar.url) 
+            %li{"data-thumb" => image_tag(@product.avatar.url)}
+              .thumb-image
+                %img= image_tag(@product.avatar.url)
+
 
         .col-md-5.single-top-in.simpleCart_shelfItem
           .single-para

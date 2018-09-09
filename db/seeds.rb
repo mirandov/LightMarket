@@ -15,7 +15,7 @@ sc2   = Subcategory.create!(name: 'Свечи', category: c2)
 sc3   = Subcategory.create!(name: 'Надувные куклы', category: c3)
 sc4   = Subcategory.create!(name: 'Декоративные ели', category: c4)
 
-p1    = Product.create!(name: 'Световая LED',
+p1    = Product.create!(name: 'Световая гирляднда LED',
 size: '20 м',
 description: 'Описание',
 color_light: 'Зеленая',
