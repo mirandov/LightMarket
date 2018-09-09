@@ -6,6 +6,8 @@ class CreateProducts < ActiveRecord::Migration
       t.string :color_light
       t.integer :price
       t.integer :min_order
+      t.text :description
+      t.attachment :avatar
       t.references :subcategory, index: true, foreign_key: true
 
       t.timestamps null: false

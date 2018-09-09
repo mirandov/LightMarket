@@ -28,9 +28,14 @@ ActiveRecord::Schema.define(version: 20180909132339) do
     t.string   "color_light"
     t.integer  "price"
     t.integer  "min_order"
+    t.text     "description"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size",    limit: 8
+    t.datetime "avatar_updated_at"
     t.integer  "subcategory_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   add_index "products", ["subcategory_id"], name: "index_products_on_subcategory_id", using: :btree

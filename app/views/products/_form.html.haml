@@ -22,7 +22,13 @@
     = f.label :min_order
     = f.number_field :min_order
   .field
+    = f.label :description
+    = f.text_field :description
+  .field
     = f.label :subcategory
-    = f.text_field :subcategory
+    = f.text_field :subcategory_id
+  .filed
+    = f.label :avatar
+    = f.file_field :avatar, input_html: { accept: 'image/*' }, id: 'avatar', class: 'form-control'
   .actions
     = f.submit 'Save'

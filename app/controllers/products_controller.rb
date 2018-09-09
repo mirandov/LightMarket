@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :download]
 
   # GET /products
   # GET /products.json
@@ -69,6 +69,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :size, :color_light, :price, :min_order, :subcategory_id)
+      params.require(:product).permit(:description, :avatar, :name, :size, :color_light, :price, :min_order, :subcategory_id)
     end
 end

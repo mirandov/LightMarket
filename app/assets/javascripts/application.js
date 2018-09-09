@@ -16,14 +16,4 @@
 //= require turbolinks
 //= require_tree .
 //= require mains
-
-
-/*
- * Welcome to the new js2coffee 2.0, now
- * rewritten to use the esprima parser.
- * try it out!
-/*
- * jQuery FlexSlider v2.5.0
- * Copyright 2012 WooThemes
- * Contributing Author: Tyler Smith
- */
+//= require turbolinks
