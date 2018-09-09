@@ -29,9 +29,9 @@ gem 'haml' , '>= 4.0.0'
 gem 'haml-rails', '>= 0.5', :group => :development
 
 # Use simple form gem for simple form generation
-gem 'simple_form'
+# gem 'simple_form'
 # Use nested_form
-gem 'nested_form'
+# gem 'nested_form'
 gem 'enum_help'
 
 gem 'bootstrap-sass', '~> 3.2.0'
