@@ -1,31 +1,29 @@
--# %h1 Listing products
--#
--# %table
--#   %thead
--#     %tr
--#       %th Name
--#       %th Size
--#       %th Color light
--#       %th Price
--#       %th Min order
--#       %th Subcategory
--#       %th
--#       %th
--#       %th
--#
--#   %tbody
--#     - @products.each do |product|
--#       %tr
--#         %td= product.name
--#         %td= product.size
--#         %td= product.color_light
--#         %td= product.price
--#         %td= product.min_order
--#         %td= product.subcategory
--#         %td= link_to 'Show', product
--#         %td= link_to 'Edit', edit_product_path(product)
--#         %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
--#
--# %br
--#
--# = link_to 'New Product', new_product_path
+.product-model
+  .container
+    %ol.breadcrumb
+      %li
+        %a{:href => mains_path} Главная
+      %li.active Товары
+    %h2 Наши товары
+    .col-md-9.product-model-sec
+      - @products.each do |p|
+        %a{:href => "single.html"}
+          .product-grid
+            .more-product
+              %span
+            .product-img.b-link-stripe.b-animate-go.thickbox
+              %img= image_tag('tree.png')
+              .b-wrapper
+                %h4.b-animate.b-from-left.b-delay03
+                  %button
+                    %span.glyphicon.glyphicon-zoom-in{"aria-hidden" => "true"}>
+                    Quick View
+            .product-info.simpleCart_shelfItem
+              .product-info-cust.prt_name
+                %h4= p.name
+                %span.item_price= p.price
+                .ofr
+                  
+                %input.item_quantity{:type => "text", :value => "1"}/
+                %input.item_add.items{:type => "button", :value => "ADD"}/
+                .clearfix
