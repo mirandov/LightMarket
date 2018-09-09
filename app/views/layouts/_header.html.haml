@@ -1,51 +1,40 @@
 - @categories = Category.all
-.line
-.header
-  .logo
-    %img= image_tag('logo2.png')
+%body
   .header-top
-    .header-grid
-      %ul.header-in
-        %li
-          %a{:href => "account.html"} Мой аккаунт
-        %li
-          -# %select.in-drop
-            %option.in-of{:value => "Dollars"}
-            %option.in-of{:value => "Euro"}
-            %option.in-of{:value => "Yen"}
-      .search-box
-        #sb-search.sb-search
-          %form
-            %input#search.sb-search-input{:name => "search", :placeholder => "Enter your search term...", :type => "search"}/
-            %input.sb-search-submit{:type => "submit", :value => ""}/
-            %span
-      / search-scripts
-
-      / //search-scripts
-      .online
-        %a{:href => "single.html"} Купить сейчас
-      .clearfix
     .header-bottom
-      .h_menu4
-        %a
-        %ul.nav
-          - @categories.each do |c|
-            %li.active
-              %a= c.name
+      .logo
+        %h1
+          %a{:href => "index.html"} Lighting
+      /
+      .top-nav
+        %ul.memenu.skyblue
+          %li.active
+            %a{:href => "index.html"} Home
+          %li.grid
+            %a{:href => "#"} Products
+            .mepanel
+              .row
 
-
-        %script{:src => "js/nav.js", :type => "text/javascript"}
-      / end h_menu4
-      %ul.header-bottom-in
-        %li
-          -# %select.drop
-            %option.in-of{:value => "Dollars"}
-            %option.in-of{:value => "Euro"}
-            %option.in-of{:value => "Yen"}
-        %li
-          -# %select.drop
-            %option.in-of{:value => "Dollars"}
-            %option.in-of{:value => "Euro"}
-            %option.in-of{:value => "Yen"}
+          %li.grid
+            %a{:href => "#"} Accessories
+            .mepanel
+              .row
+          %li.grid
+            %a{:href => "typo.html"} Typo
+          %li.grid
+            %a{:href => "contact.html"} Contact
+      /
+      .cart.box_1
+        %a{:href => "checkout.html"}
+          .total
+            %span.simpleCart_total
+            (
+            %span#simpleCart_quantity.simpleCart_quantity>
+            )
+          %span.glyphicon.glyphicon-shopping-cart{"aria-hidden" => "true"}
+        %p
+          %a.simpleCart_empty{:href => "javascript:;"} Empty Cart
+        .clearfix
       .clearfix
-  .clearfix
+      /
+    .clearfix
