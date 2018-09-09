@@ -193,11 +193,30 @@ ul.memenu.skyblue {
 }
 
 .skyblue {
-  li > a, > li.showhide span {
+  li > a {
     color: #caccce;
   }
-  form.contact input[type="submit"] {
-    background: #0194be;
+  > li {
+    &.showhide span {
+      color: #caccce;
+    }
+    &:hover > a, &.active > a {
+      color: #00a0dc;
+    }
+  }
+  .dropdown li:hover > a {
+    color: #00a0dc;
+  }
+  .mepanel img:hover {
+    border: solid 1px #0194be;
+  }
+  form.contact {
+    input[type="text"]:focus, textarea:focus {
+      border: solid 1px #0194be;
+    }
+    input[type="submit"] {
+      background: #0194be;
+    }
   }
 }
 

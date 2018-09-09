@@ -136,12 +136,14 @@ h1.b1, h2.b2, h3.b3 {
     }
   }
 }
-
-.glyphicon-shopping-cart:before {
-  margin-left: 5px;
-  font-size: 1.2em;
+//
+// .glyphicon-shopping-cart:before {
+//   margin-left: 5px;
+//   font-size: 1.2em;
+// }
+.glyphicon-barcode:before {
+  content: "\e040";
 }
-
 .box_1 p a {
   color: rgba(204, 204, 204, 1);
   font-size: 0.8em;
@@ -190,19 +192,19 @@ h1.b1, h2.b2, h3.b3 {
 /*--- slider-css --*/
 
 .banner1 {
-  background: url(images/baner.jpg) no-repeat 0px 0px;
+  background: url(banner.jpg) no-repeat 0px 0px;
   background-size: cover;
   min-height: 355px;
 }
 
 .banner2 {
-  background: url(images/baner.jpg) no-repeat 0px 0px;
+  background: url(banner2.jpg) no-repeat 0px 0px;
   background-size: cover;
   min-height: 355px;
 }
 
 .banner3 {
-  background: url(images/baner.jpg) no-repeat 0px 0px;
+  background: url(banner3.jpg) no-repeat 0px 0px;
   background-size: cover;
   min-height: 355px;
 }
@@ -303,7 +305,7 @@ h1.b1, h2.b2, h3.b3 {
 
 .callbacks_nav {
   position: absolute;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(17, 34, 0, 1);
   top: 40%;
   left: 0;
   opacity: 0.7;
@@ -313,13 +315,13 @@ h1.b1, h2.b2, h3.b3 {
   text-decoration: none;
   height: 72px;
   width: 38px;
-  background: transparent url("images/sp.png") no-repeat -19px -7px;
+  background: transparent url("sp.png") no-repeat -19px -7px;
   &:active {
     opacity: 1.0;
   }
   &.next {
     left: auto;
-    background: transparent url("images/sp.png") no-repeat -77px -7px;
+    background: transparent url("sp.png") no-repeat -77px -7px;
     right: 0;
   }
 }
@@ -667,7 +669,7 @@ ul.nav-bottom li {
   i {
     width: 27px;
     height: 27px;
-    background: url('images/social.png') no-repeat 0px 0px;
+    background: url('social.png') no-repeat 0px 0px;
     display: inline-block;
     margin: 0 5px;
   }
@@ -1146,7 +1148,7 @@ ul.dropdown-menu1 li a:hover {
     display: block;
     width: 18px;
     height: 18px;
-    background: url(images/star.png) 0 -3px;
+    background: url(star.png) 0 -3px;
     float: left;
     font-family: FontAwesome;
     font-style: normal;
@@ -1161,7 +1163,7 @@ ul.dropdown-menu1 li a:hover {
   }
   .rating input:checked ~ label {
     color: #2da5da;
-    background: url(images/star.png) 0 -20px;
+    background: url(star.png) 0 -20px;
     display: -webkit-box;
   }
 }
@@ -1386,7 +1388,7 @@ ul.star-footer li {
   i {
     height: 16px;
     width: 16px;
-    background: url("images/img-sprite.png") no-repeat -261px -106px;
+    background: url("img-sprite.png") no-repeat -261px -106px;
     display: inline-block;
   }
 }
@@ -1700,7 +1702,7 @@ h3.ghj {
 }
 
 .close1, .close2 {
-  background: url('images/close_1.png') no-repeat 0px 0px;
+  background: url('close_1.png') no-repeat 0px 0px;
   cursor: pointer;
   width: 28px;
   height: 28px;
@@ -2777,10 +2779,10 @@ label {
     left: 0px;
     height: 72px;
     width: 22px;
-    background: transparent url("images/sp.png") no-repeat -13px -6px;
+    background: transparent url("sp.png") no-repeat -13px -6px;
     background-size: 84px;
     &.next {
-      background: transparent url("images/sp.png") no-repeat -44px -4px;
+      background: transparent url("sp.png") no-repeat -44px -4px;
       background-size: 88px;
     }
   }

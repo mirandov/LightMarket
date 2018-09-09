@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  asset-url('#{"fonts/icons"}/icomoon.eot?59z9kr');
+  src:  asset-url('#{"fonts/icons"}/icomoon.eot?59z9kr#iefix') format('embedded-opentype'),
+    asset-url('#{"fonts/icons"}/icomoon.ttf?59z9kr') format('truetype'),
+    asset-url('#{"fonts/icons"}/icomoon.woff?59z9kr') format('woff'),
+    asset-url('#{"fonts/icons"}/icomoon.svg?59z9kr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+$icomoon-font-path: "fonts/icons" !default;
+$ubutnu-font-path: "fonts/ubuntu" !default;
+
+$icon-search: \e902;
+$icon-user: \e903;
+$icon-star: \e904;
+$icon-settings: \e905;
+$icon-reports: \e906;
+$icon-logout: \e907;
+$icon-lock: \e908;
+$icon-task: \e900;
+$icon-alert-circle: \e909;
+$icon-alert-octagon: \e90a;
+$icon-alert-triangle: \e90b;
+$icon-arrow-down: \e911;
+$icon-arrow-left: \e912;
+$icon-arrow-right: \e913;
+$icon-arrow-up: \e914;
+$icon-check-circle: \e91a;
+$icon-check: \e91b;
+$icon-cog: \e915;
+$icon-download: \e916;
+$icon-eye: \e90c;
+$icon-report: \e901;
+$icon-menu: \e90d;
+$icon-minus-circle: \e91d;
+$icon-minus-square: \e91e;
+$icon-minus: \e91f;
+$icon-plus-circle: \e920;
+$icon-plus-square: \e921;
+$icon-plus: \e922;
+$icon-search2: \e917;
+$icon-star2: \e918;
+$icon-tag: \e919;
+$icon-trash-2: \e90e;
+$icon-trash: \e90f;
+$icon-x-circle: \e91c;
+$icon-x: \e910;
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.icon-search {
+  &:before {
+    content: unicode($icon-search);
+  }
+}
+.icon-user {
+  &:before {
+    content: unicode($icon-user);
+  }
+}
+.icon-star {
+  &:before {
+    content: unicode($icon-star);
+  }
+}
+.icon-settings {
+  &:before {
+    content: unicode($icon-settings);
+  }
+}
+.icon-reports {
+  &:before {
+    content: unicode($icon-reports);
+  }
+}
+.icon-logout {
+  &:before {
+    content: unicode($icon-logout);
+  }
+}
+.icon-lock {
+  &:before {
+    content: unicode($icon-lock);
+  }
+}
+.icon-task {
+  &:before {
+    content: unicode($icon-task);
+  }
+}
+.icon-alert-circle {
+  &:before {
+    content: unicode($icon-alert-circle);
+  }
+}
+.icon-alert-octagon {
+  &:before {
+    content: unicode($icon-alert-octagon);
+  }
+}
+.icon-alert-triangle {
+  &:before {
+    content: unicode($icon-alert-triangle);
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: unicode($icon-arrow-down);
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: unicode($icon-arrow-left);
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: unicode($icon-arrow-right);
+  }
+}
+.icon-arrow-up {
+  &:before {
+    content: unicode($icon-arrow-up);
+  }
+}
+.icon-check-circle {
+  &:before {
+    content: unicode($icon-check-circle);
+  }
+}
+.icon-check {
+  &:before {
+    content: unicode($icon-check);
+  }
+}
+.icon-cog {
+  &:before {
+    content: unicode($icon-cog);
+  }
+}
+.icon-download {
+  &:before {
+    content: unicode($icon-download);
+  }
+}
+.icon-eye {
+  &:before {
+    content: unicode($icon-eye);
+  }
+}
+.icon-report {
+  &:before {
+    content: unicode($icon-report);
+  }
+}
+.icon-menu {
+  &:before {
+    content: unicode($icon-menu);
+  }
+}
+.icon-minus-circle {
+  &:before {
+    content: unicode($icon-minus-circle);
+  }
+}
+.icon-minus-square {
+  &:before {
+    content: unicode($icon-minus-square);
+  }
+}
+.icon-minus {
+  &:before {
+    content: unicode($icon-minus);
+  }
+}
+.icon-plus-circle {
+  &:before {
+    content: unicode($icon-plus-circle);
+  }
+}
+.icon-plus-square {
+  &:before {
+    content: unicode($icon-plus-square);
+  }
+}
+.icon-plus {
+  &:before {
+    content: unicode($icon-plus);
+  }
+}
+.icon-search2 {
+  &:before {
+    content: unicode($icon-search2);
+  }
+}
+.icon-star2 {
+  &:before {
+    content: unicode($icon-star2);
+  }
+}
+.icon-tag {
+  &:before {
+    content: unicode($icon-tag);
+  }
+}
+.icon-trash-2 {
+  &:before {
+    content: unicode($icon-trash-2);
+  }
+}
+.icon-trash {
+  &:before {
+    content: unicode($icon-trash);
+  }
+}

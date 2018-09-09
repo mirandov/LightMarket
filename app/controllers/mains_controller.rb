@@ -7,4 +7,8 @@ class MainsController < ApplicationController
   def show
 
   end
+
+  def description
+
+  end
 end

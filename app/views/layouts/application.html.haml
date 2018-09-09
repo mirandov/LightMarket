@@ -3,11 +3,36 @@
   %head
     %meta(charset="utf-8")
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    %title= "page_title"
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "Wedding Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,\nSmartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design", :name => "keywords"}/
+    %link{:href => "bootstrap.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %title= "Team-Light"
+    %link{:href => "style.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    %script{:src => "jquery.min.js"}
+    / //theme style
+
+    %script{:type => "application/x-javascript"}
+      :cdata
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    / start menu
+    %script{:src => "simpleCart.min.js"} :cdata
+    / start menu
+    %link{:href => "memenu.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "memenu.js", :type => "text/javascript"}
+    :javascript
+      $(document).ready(function(){$(".memenu").memenu();});
+    / Custom Theme files
+    / theme style
+
+    / /start menu
 
   %body
+    - @categories = Category.all
     = render 'layouts/header'
     = yield
+    = render 'layouts/footer'

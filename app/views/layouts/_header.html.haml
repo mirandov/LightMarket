@@ -3,26 +3,18 @@
   .header-top
     .header-bottom
       .logo
-        %h1
-          %a{:href => "index.html"} Lighting
+        %a{:href => mains_path}
+          %img= image_tag('logo2.png')
+
       /
       .top-nav
         %ul.memenu.skyblue
           %li.active
-            %a{:href => "index.html"} Home
+            %a{:href => descriptions_path} О нас
           %li.grid
-            %a{:href => "#"} Products
-            .mepanel
-              .row
-
+            %a{:href => deliveries_path} Доставка
           %li.grid
-            %a{:href => "#"} Accessories
-            .mepanel
-              .row
-          %li.grid
-            %a{:href => "typo.html"} Typo
-          %li.grid
-            %a{:href => "contact.html"} Contact
+            %a{:href => contacts_path} Контакты
       /
       .cart.box_1
         %a{:href => "checkout.html"}
@@ -33,7 +25,7 @@
             )
           %span.glyphicon.glyphicon-shopping-cart{"aria-hidden" => "true"}
         %p
-          %a.simpleCart_empty{:href => "javascript:;"} Empty Cart
+          %a.simpleCart_empty{:href => "javascript:;"} Корзина пуста
         .clearfix
       .clearfix
       /

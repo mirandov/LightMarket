@@ -1,0 +1,40 @@
+.footer
+  .container
+    .footer-grids
+      .col-md-4.about-us
+        %h3 О нас
+        %p Расширь границы света вместе с нами
+
+      .col-md-5.ftr-grid
+        %h3 Категории
+        %ul.nav-bottom
+          - @categories.each do |c|
+            %li.active
+              %a= c.name
+      .col-md-3.ftr-grid
+        %h3 Информация
+        %ul.nav-bottom
+          %li=             "ООО Team-Light"
+          %li=             "ОРГН 1111111111111"
+          %li=            " ИНН 1111111111"
+          %li=            " КПП 111111111"
+      .clearfix
+
+.copywrite
+  .container
+    .copy
+      %p
+        © 2018 Мирандов Л.Д. | Design by
+        %a{:href => "https://github.com/mirandov/", :target => "_blank"} Mirandov
+    .social
+      %a{:href => "#"}
+        %i.facebook
+      %a{:href => "#"}
+        %i.twitter
+      %a{:href => "#"}
+        %i.dribble
+      %a{:href => "#"}
+        %i.google
+      %a{:href => "#"}
+        %i.youtube
+    .clearfix

@@ -11,7 +11,19 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//=require mains
+//= require mains
+
+
+/*
+ * Welcome to the new js2coffee 2.0, now
+ * rewritten to use the esprima parser.
+ * try it out!
+/*
+ * jQuery FlexSlider v2.5.0
+ * Copyright 2012 WooThemes
+ * Contributing Author: Tyler Smith
+ */

@@ -1,3 +1,14 @@
+%script{:src => "responsiveslides.min.js"}
+:javascript
+  $(function () {
+    $("#slider").responsiveSlides({
+    	auto: true,
+    	nav: true,
+    	speed: 500,
+      namespace: "callbacks",
+      pager: false,
+    });
+  });
 .slider
   .callbacks_container
     %ul#slider.rslides
@@ -16,3 +27,88 @@
           .banner-info
             %h3 Maecenas interposuere volutpat.
             %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. consectetur adipiscing elit.
+/
+%script{:src => "bootstrap.js"} :cdata
+.items
+  .container
+    .items-sec
+      .col-md-3.feature-grid
+        %a{:href => "product.html"}
+          %img= image_tag('1.png')
+          .arrival-info
+            %h4 Lighting #1
+            %p Rs 12000
+            %span.pric1
+              %del Rs 18000
+            %span.disc [12% Off]
+          .viw
+            %a{:href => "product.html"}
+              %span.glyphicon.icon-bar{"aria-hidden" => "true"}>
+              View
+      .col-md-3.feature-grid
+        %a{:href => "product.html"}
+          %img= image_tag('6.png')
+          .arrival-info
+            %h4 Lighting #1
+            %p Rs 10000
+            %span.pric1
+              %del Rs 14000
+            %span.disc [14% Off]
+          .viw
+            %a{:href => "product.html"}
+              %span.glyphicon.glyphicon-eye-open{"aria-hidden" => "true"}>
+              View
+      .col-md-3.feature-grid
+        %a{:href => "product.html"}
+          %img= image_tag('4.png')
+          .arrival-info
+            %h4 Lighting #1
+            %p Rs 8500
+            %span.pric1
+              %del Rs 9500
+            %span.disc [10% Off]
+          .viw
+            %a{:href => "product.html"}
+              %span.glyphicon.glyphicon-eye-open{"aria-hidden" => "true"}>
+              View
+      .col-md-3.feature-grid
+        %a{:href => "product.html"}
+          %img= image_tag('2.png')
+          .arrival-info
+            %h4 Lighting #1
+            %p Rs 12000
+            %span.pric1
+              %del Rs 18000
+            %span.disc [12% Off]
+          .viw
+            %a{:href => "product.html"}
+              %span.glyphicon.glyphicon-eye-open{"aria-hidden" => "true"}>
+              View
+      .clearfix
+    .items-sec.btm-sec
+      .col-md-3.feature-grid
+        %a{:href => "product.html"}
+          %img= image_tag('3.png')
+          .arrival-info
+            %h4 Lighting #1
+            %p Rs 500
+            %span.pric1
+              %del Rs 650
+            %span.disc [8% Off]
+          .viw
+            %a{:href => "product.html"}
+              %span.glyphicon.glyphicon-eye-open{"aria-hidden" => "true"}>
+              View
+      .col-md-3.feature-grid
+        %a{:href => "product.html"}
+          %img= image_tag('5.png')
+          .arrival-info
+            %h4 Lighting #1
+            %p Rs 400
+            %span.pric1
+              %del Rs 750
+            %span.disc [12% Off]
+          .viw
+            %a{:href => "product.html"}
+              %span.glyphicon.glyphicon-eye-open{"aria-hidden" => "true"}>
+              View

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :categories
+  resources :contacts, only: [:index, :show]
+  resources :deliveries, only: [:index, :show]
+  resources  :descriptions, only: [:index, :show]
   resources :mains, only: [:index, :show]
   root :to => 'mains#index'
   # The priority is based upon order of creation: first created -> highest priority.

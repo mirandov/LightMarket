@@ -1,0 +1,53 @@
+%script{:src => "memenu.js", :type => "text/javascript"}
+:javascript
+  $(document).ready(function(){$(".memenu").memenu();});
+
+.contact
+  .container
+    %ol.breadcrumb
+      %li
+        %a{:href => mains_path} Главная
+      %li.active Контакты
+    / start contact
+    %h3 Свяжитесь с нами
+    .section.group
+      .col-md-6.span_1_of_3
+        .contact_info
+          %h4 Мы здесь
+          .map
+            %iframe{:src => "https://maps.google.co.in/maps?f=q&source=s_q&hl=en&geocode=&q=Lighthouse+Point,+FL,+United+States&aq=4&oq=light&sll=26.275636,-80.087265&sspn=0.04941,0.104628&ie=UTF8&hq=&hnear=Lighthouse+Point,+Broward,+Florida,+United+States&t=m&z=14&ll=26.275636,-80.087265&output=embed"}
+        .company_address
+          %h4 Информация о компании:
+          %p Одинцовский район, Московская область, Россия,
+          %p коттеджный посёлок Добрыня, 3
+          %p Телефон:+7 (000) 000-00-00
+          %p Факс: (000) 000 00 00 0
+          %p
+            Email:
+            %a{:href => "mailto:p.nikiforova@team-light.ru"} p.nikiforova@team-light.ru
+      .col-md-6.span_2_of_3
+        .contact-form
+          %form
+            %div
+              %span
+                %label Имя
+              %span
+                %input.textbox{:name => "userName", :type => "text"}/
+            %div
+              %span
+                %label e-mail
+              %span
+                %input.textbox{:name => "userEmail", :type => "text"}/
+            %div
+              %span
+                %label Контактный телефон
+              %span
+                %input.textbox{:name => "userPhone", :type => "text"}/
+            %div
+              %span
+                %label Сообщение
+              %span
+                %textarea{:name => "userMsg"}
+            %div
+              %span
+                %input.mybutton{:type => "submit", :value => "Отправить"}/
