@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  size: MyString
+  color_light: MyString
+  price: 1
+  min_order: 1
+  subcategory_id: 
+
+two:
+  name: MyString
+  size: MyString
+  color_light: MyString
+  price: 1
+  min_order: 1
+  subcategory_id: 

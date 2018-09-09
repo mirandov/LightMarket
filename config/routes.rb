@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :products
+  resources :subcategories
   resources :categories
   resources :contacts, only: [:index, :show]
   resources :deliveries, only: [:index, :show]
