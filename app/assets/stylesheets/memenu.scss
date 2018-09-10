@@ -60,6 +60,7 @@ ul.memenu.skyblue {
         font-size: 14px;
         &:hover {
           text-decoration: none;
+          background: white;
           color: #ff5d56;
         }
       }
@@ -88,6 +89,7 @@ ul.memenu.skyblue {
       -o-transition: border .3s linear;
       transition: border .3s linear;
       &:hover {
+        background: white;
         border: solid 1px #777;
       }
     }
@@ -194,6 +196,7 @@ ul.memenu.skyblue {
 
 .skyblue {
   li > a {
+    background: white;
     color: #caccce;
   }
   > li {
@@ -201,10 +204,12 @@ ul.memenu.skyblue {
       color: #caccce;
     }
     &:hover > a, &.active > a {
+      background: white;
       color: #00a0dc;
     }
   }
   .dropdown li:hover > a {
+    background: white;
     color: #00a0dc;
   }
   .mepanel img:hover {
