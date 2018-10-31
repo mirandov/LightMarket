@@ -15,14 +15,14 @@ set :rails_env, :production
 set :branch, 'master'
 
 # Адрес сервера аутентификации
-set :auth_host, 'dmo.pmtonline.ru:2000'
+# set :auth_host, 'dmo.pmtonline.ru:2000'
 
-set :cassandra_hosts, ['localhost']
+# set :cassandra_hosts, ['localhost']
 
 # set :ecg_service_host, '193.106.95.31'
-set :ecg_service_host, 'dmo.pmtonline.ru'
+# set :ecg_service_host, 'dmo.pmtonline.ru'
 
-set :deploy_to, '/var/www/'
+set :deploy_to, '/var/www/market'
 
 set :ssh_options, {
     user: 'webmaster',
