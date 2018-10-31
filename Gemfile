@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
+gem 'thin', '>= 1.6.0'
 # Use HAML for views
 gem 'haml' , '>= 4.0.0'
 gem 'haml-rails', '>= 0.5', :group => :development
@@ -33,6 +33,7 @@ gem 'haml-rails', '>= 0.5', :group => :development
 # Use nested_form
 # gem 'nested_form'
 gem 'enum_help'
+
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap-multiselect-rails'
@@ -53,10 +54,8 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv', '~> 2.0'
 end
-ruby "2.3.3"

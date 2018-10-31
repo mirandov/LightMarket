@@ -7,23 +7,24 @@
     %h2 Наши товары
     .col-md-9.product-model-sec
       - @products.each do |p|
-        %a{:href => product_path(p.id)}
-          .product-grid
-            .more-product
-              %span
-            .product-img.b-link-stripe.b-animate-go.thickbox
+
+        .product-grid
+          .more-product
+            %span
+          .product-img.b-link-stripe.b-animate-go.thickbox
+            %a{:href => product_path(p.id)}
               %img= image_tag(p.avatar.url) if p.avatar.exists?
               .b-wrapper
                 %h4.b-animate.b-from-left.b-delay03
                   %button
                     %span.glyphicon.glyphicon-zoom-in{"aria-hidden" => "true"}>
                     Быстрый просмотр
-            .product-info.simpleCart_shelfItem
-              .product-info-cust.prt_name
-                %h4= p.name
-                %span.item_price= p.price
-                .ofr
+          .product-info.simpleCart_shelfItem
+            .product-info-cust.prt_name
+              %h4= p.name
+              %span.item_price= p.price
+              .ofr
 
-                %input.item_quantity{:type => "text", :value => "1"}/
-                %input.item_add.items{:type => "button", :value => "ADD"}/
-                .clearfix
+            %input.item_quantity{:type => "text", :value => "1"}/
+            %input.item_add.items{:type => "button", :value => "+"}/
+            .clearfix
