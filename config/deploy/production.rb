@@ -25,6 +25,7 @@ set :branch, 'master'
 set :deploy_to, '/var/www/market'
 
 set :ssh_options, {
+    paranoid: false,
     user: 'webmaster',
     forward_agent: true,
     port: 22
