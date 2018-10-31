@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.1'
+# lock '3.4.1'
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.3.0' # do not move to deploy folder!
 
@@ -105,16 +105,16 @@ namespace :deploy do
 
   before :starting, :check_revision
 
-  before :restart, :set_config do
-    on roles(:app), in: :sequence, wait: 3 do
-      within release_path do
-        # НЕ пытайся отрефакторить это в блочную строку! Будут проблемы с '\\'
-        execute :sed, "-i -e \"s/config.cas_base_url.*/config.cas_base_url = 'https:\\/\\/#{fetch(:auth_host)}'/\" config/initializers/devise.rb"
-        execute :sed, "-i -e \"s/c.hosts.*/c.hosts = #{fetch(:cassandra_hosts).to_s.gsub!('"', "'")}/\" config/initializers/cassandra.rb"
-        execute :sed, "-i -e \"s/host.*/host: '#{fetch(:ecg_service_host)}'.freeze,/\" config/initializers/ecg_service.rb"
-      end
-    end
-  end
+  # before :restart, :set_config do
+  #   on roles(:app), in: :sequence, wait: 3 do
+  #     within release_path do
+  #       # НЕ пытайся отрефакторить это в блочную строку! Будут проблемы с '\\'
+  #       execute :sed, "-i -e \"s/config.cas_base_url.*/config.cas_base_url = 'https:\\/\\/#{fetch(:auth_host)}'/\" config/initializers/devise.rb"
+  #       execute :sed, "-i -e \"s/c.hosts.*/c.hosts = #{fetch(:cassandra_hosts).to_s.gsub!('"', "'")}/\" config/initializers/cassandra.rb"
+  #       execute :sed, "-i -e \"s/host.*/host: '#{fetch(:ecg_service_host)}'.freeze,/\" config/initializers/ecg_service.rb"
+  #     end
+  #   end
+  # end
 
   after :publishing, :restart
   after :finishing, 'deploy:cleanup'

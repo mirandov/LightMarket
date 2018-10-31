@@ -1,0 +1,24 @@
+# Run `thin -h` to know more
+
+# Server options:
+port: 3000
+#socket: tmp/sockets/thin.sock
+
+# Daemon options:
+daemonize: true
+#log: log/thin.log
+pid: tmp/pids/thin.pid
+#user: NAME
+#group: NAME
+#tag: NAME
+
+# Cluster options:
+#servers: 4
+wait: 30
+
+# Tuning options:
+# timeout: 120
+#max_conns: 1024
+#max_persistent_conns: 512
+#threaded: true
+#no-epoll: true
