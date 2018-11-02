@@ -202,19 +202,19 @@ h1.b1, h2.b2, h3.b3 {
 /*--- slider-css --*/
 
 .banner1 {
-  background: url(banner.jpg) no-repeat 0px 0px;
+  background: url(asset-path("banner.jpg"))no-repeat 0px 0px;
   background-size: cover;
   min-height: 355px;
 }
 
 .banner2 {
-  background: url(banner5.jpg) no-repeat 0px 0px;
+  background: url(asset-path("banner5.jpg")) no-repeat 0px 0px;
   background-size: cover;
   min-height: 355px;
 }
 
 .banner3 {
-  background: url(12.jpg) no-repeat 0px 0px;
+  background:  url(asset-path("12.jpg")) no-repeat 0px 0px;
   background-size: cover;
   min-height: 355px;
 }
