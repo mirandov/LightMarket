@@ -15,6 +15,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require mains
+//= require mains.js
 //= require turbolinks
 //= require memenu
+//= require responsiveslides.min
+//= require simpleCart.min
+//= require jquery.min
+//= require jquery.jscrollpane.min
+//= require jquery.flexslider
+//= require jquery.flexisel
+//= require jquery-ui.min
+//= require imagezoom
