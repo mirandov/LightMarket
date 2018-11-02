@@ -17,3 +17,4 @@
 //= require_tree .
 //= require mains
 //= require turbolinks
+//= require memenu
