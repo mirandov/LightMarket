@@ -29,3 +29,8 @@
 @import "form";
 @import "jquery-ui";
 @import "icons";
+.banner8 {
+  background: url(asset-path("12.jpg")) no-repeat 0px 0px;
+  background-size: cover;
+  min-height: 355px;
+}
