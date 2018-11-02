@@ -4,7 +4,9 @@ class SubcategoriesController < ApplicationController
   # GET /subcategories
   # GET /subcategories.json
   def index
-    @subcategories = Subcategory.all
+    @categories = Category.all
+    @subcategories = Subcategory.all.where(category_id: params[:cat].to_i)
+    # raise @subcategories.inspect
   end
 
   # GET /subcategories/1

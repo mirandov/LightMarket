@@ -1,23 +1,37 @@
-%h1 Listing subcategories
+.product-model
+  .container
+    %ol.breadcrumb
+      %li
+        %a{:href => mains_path} Главная
+      %li.active Товары
+    %h2 Наши товары
+    .col-md-9.product-model-sec
+      - @subcategories.each do |p|
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Category
-      %th
-      %th
-      %th
+        .product-grid
+          .more-product
+            %span
+          .product-img.b-link-stripe.b-animate-go.thickbox
+            %a{:href => subcategory_path(p.id)}= p.name
 
-  %tbody
-    - @subcategories.each do |subcategory|
-      %tr
-        %td= subcategory.name
-        %td= subcategory.category
-        %td= link_to 'Show', subcategory
-        %td= link_to 'Edit', edit_subcategory_path(subcategory)
-        %td= link_to 'Destroy', subcategory, method: :delete, data: { confirm: 'Are you sure?' }
+          .product-info.simpleCart_shelfItem
+            .product-info-cust.prt_name
 
-%br
+              .ofr
 
-= link_to 'New Subcategory', new_subcategory_path
+            -# %input.item_quantity{:type => "text", :value => "1"}/
+            -# %input.item_add.items{:type => "button", :value => "+"}/
+            .clearfix
+    .rsidebar.span_1_of_left
+      %section.sky-form
+        .product_right
+          %h4.m_2
+            Категории
+          .tab1
+            - @categories.each do |c|
+              %ul.place
+
+                %li
+                  %a{:href => subcategories_path(cat:c.id)}= c.name
+                %li.by
+                  .clearfix
