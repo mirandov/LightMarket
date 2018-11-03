@@ -12,4 +12,8 @@ module SubcategoriesHelper
     end
     price = price.reverse.join('') + " руб."
   end
+
+  def category_for_select
+    Category.all.map{|elem| [elem.name, elem.id]}
+  end
 end

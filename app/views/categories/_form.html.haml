@@ -7,7 +7,16 @@
           %li= message
 
   .field
-    = f.label :name
+    = f.label "#{Category.human_attribute_name(:name)}"
     = f.text_field :name
+  .field
+    = f.label "#{Category.human_attribute_name(:description)}"
+    = f.text_field :description
+  .field
+    = f.label "#{Category.human_attribute_name(:specifications)}"
+    = f.text_field :specifications
+  .field
+    = f.label "#{Category.human_attribute_name(:area)}"
+    = f.text_field :area
   .actions
-    = f.submit 'Save'
+    = f.submit 'Сохранить'

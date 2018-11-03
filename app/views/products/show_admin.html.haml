@@ -1,0 +1,33 @@
+.product
+  .container
+    .product-price1
+      .top-sing
+        .col-md-7.single-top
+        %h2= "Товар"
+        %br
+        %br
+        %table.table.table-hover
+          %tbody
+            %tr
+              %td= Product.human_attribute_name(:name)
+              %td= @product.name
+            %tr
+              %td= Product.human_attribute_name(:led_count)
+              %td= @product.led_count
+            %tr
+              %td= Product.human_attribute_name(:size)
+              %td= @product.size
+            %tr
+              %td= Product.human_attribute_name(:color_light)
+              %td{:bgcolor => "#{@product.color_light}"}
+            %tr
+              %td= Product.human_attribute_name(:price)
+              %td= point_to(@product.price)
+
+        %br
+        %br
+        .text-center
+          = link_to 'Назад', admin_panels_path, class: 'btn btn-primary btn-sm'
+          = link_to 'Редактировать', edit_product_path(@product), class: 'btn btn-warning btn-sm'
+          = link_to 'Удалить', @product, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-danger btn-sm'
+-# :description, :avatar, :name, :size, :color_light, :price, :min_order

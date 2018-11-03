@@ -1,11 +1,20 @@
 ru:
   activerecord:
     attributes:
+      subcategory:
+        avatar:   Фото
+        category:  Категория
+        name:  Название
+        specifications: Эксплуатационные характеристики
       category:
+        name:        Название
         description: Описание
         specifications: Эксплуатационные характеристики
         area:        Область применения
       product:
+        avatar:   Фото
+        subcategory: Подкатегория
+        description: Описание
         name:       Наименование
         size:       Размер
         led_count:  Кол-во LED

@@ -13,22 +13,16 @@
     = f.label :size
     = f.text_field :size
   .field
+    = f.label :led_count
+    = f.text_field :led_count
+  .field
     = f.label :color_light
     = f.text_field :color_light
   .field
-    = f.label :price
-    = f.number_field :price
-  .field
-    = f.label :min_order
-    = f.number_field :min_order
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
     = f.label :subcategory
-    = f.text_field :subcategory_id
+    = f.select :subcategory_id, subcategory_for_select
   .filed
     = f.label :avatar
-    = f.file_field :avatar, input_html: { accept: 'image/*' }, id: 'avatar', class: 'form-control'
+    = f.file_field :avatar, input_html: { accept: 'image/*' }, id: 'avatar', class: 'text-center'
   .actions
     = f.submit 'Save'

@@ -1,5 +1,20 @@
-%h1 New category
+.product-model
+  .container
+    .product-price1
+      %br
+      %br
+      %h2 Новая категория
+      %br
+      %br
+      %br
+      %br
+      .top-sing
+        .col-md-12.text-center
+          = render 'form'
 
-= render 'form'
+          %br
+          = link_to 'Назад', admin_panels_path, class: 'btn btn-primary btn-sm'
+          %br
+          %br
 
-= link_to 'Back', categories_path
+          %br

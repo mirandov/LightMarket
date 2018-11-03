@@ -1,0 +1,38 @@
+.product
+  .container
+    .product-price1
+      .top-sing
+        .col-md-7.single-top
+        %h2= "Категория"
+        %br
+        %br
+        %table.table.table-hover
+          %tbody
+            %tr
+              %td= Subcategory.human_attribute_name(:name)
+              %td= @subcategory.name
+            %tr
+              %td= Subcategory.human_attribute_name(:specifications)
+              %td= @subcategory.specifications
+            %tr
+              %td= Subcategory.human_attribute_name(:categoty)
+              %td= @subcategory.category.name
+        %br
+        %br
+        .text-center
+          = link_to 'Назад', admin_panels_path, class: 'btn btn-primary btn-sm'
+          = link_to 'Редактировать', edit_subcategory_path(@subcategory), class: 'btn btn-warning btn-sm'
+          = link_to 'Удалить', @subcategory, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-danger btn-sm'
+-# %p#notice= notice
+-#
+-# %p
+-#   %b Name:
+-#   = @subcategory.name
+-# %p
+-#   %b Size:
+-#   = @subcategory.specifications
+
+
+-# = link_to 'Edit', edit_shipment_path(@shipment)
+-# \|
+-# = link_to 'Back', shipments_path

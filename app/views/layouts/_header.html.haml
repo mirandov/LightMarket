@@ -17,8 +17,12 @@
             %a{:href => contacts_path} Контакты
       /
 
-
-
+      - if current_user.has_role?("admin")
+        .cart.box_1
+          - if user_signed_in?
+            - if current_user.has_role?("admin")
+              = link_to 'Панель админа', admin_panels_path
+              %br
       .cart.box_1
         - if user_signed_in?
           %span

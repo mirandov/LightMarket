@@ -18,6 +18,9 @@ class SubcategoriesController < ApplicationController
   def show
   end
 
+  def show_admin
+    @subcategory = Subcategory.find(params[:id].to_i)
+  end
   # GET /subcategories/new
   def new
     @subcategory = Subcategory.new
@@ -34,7 +37,7 @@ class SubcategoriesController < ApplicationController
 
     respond_to do |format|
       if @subcategory.save
-        format.html { redirect_to @subcategory, notice: 'Subcategory was successfully created.' }
+        format.html { redirect_to admin_panels_path, notice: 'Subcategory was successfully created.' }
         format.json { render :show, status: :created, location: @subcategory }
       else
         format.html { render :new }
@@ -48,7 +51,7 @@ class SubcategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @subcategory.update(subcategory_params)
-        format.html { redirect_to @subcategory, notice: 'Subcategory was successfully updated.' }
+        format.html { redirect_to admin_panels_path, notice: 'Subcategory was successfully updated.' }
         format.json { render :show, status: :ok, location: @subcategory }
       else
         format.html { render :edit }
@@ -62,7 +65,7 @@ class SubcategoriesController < ApplicationController
   def destroy
     @subcategory.destroy
     respond_to do |format|
-      format.html { redirect_to subcategories_url, notice: 'Subcategory was successfully destroyed.' }
+      format.html { redirect_to admin_panels_path, notice: 'Subcategory was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,6 +78,6 @@ class SubcategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subcategory_params
-      params.require(:subcategory).permit(:name, :category_id)
+      params.require(:subcategory).permit(:name,:avatar, :category_id, :specifications)
     end
 end

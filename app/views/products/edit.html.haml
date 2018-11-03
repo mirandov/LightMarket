@@ -1,7 +1,20 @@
-%h1 Editing product
+.product-model
+  .container
+    .product-price1
+      %br
+      %br
+      %h2 Редактирование продукта
+      %br
+      %br
+      %br
+      %br
+      .top-sing
+        .col-md-12.text-center
+          = render 'form'
 
-= render 'form'
+          %br
+          = link_to 'Назад', admin_panels_path, class: 'btn btn-primary btn-sm'
+          %br
+          %br
 
-= link_to 'Show', @product
-\|
-= link_to 'Back', products_path
+          %br

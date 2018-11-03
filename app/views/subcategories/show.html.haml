@@ -30,6 +30,10 @@
       .top-sing
         .col-md-7.single-top
           %ul.slides
+            %li{"data-thumb" => image_tag(@subcategory.avatar.url)}
+              .thumb-image
+                %img= image_tag(@subcategory.avatar.url)
+
 
 
         .col-md-5.single-top-in.simpleCart_shelfItem

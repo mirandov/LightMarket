@@ -7,10 +7,16 @@
           %li= message
 
   .field
-    = f.label :name
+    = f.label "#{Subcategory.human_attribute_name(:name)}"
     = f.text_field :name
   .field
-    = f.label :category
-    = f.text_field :category
+    = f.label "#{Subcategory.human_attribute_name(:specifications)}"
+    = f.text_field :specifications
+  .field
+    = f.label "#{Subcategory.human_attribute_name(:category)}"
+    = f.select :category_id, category_for_select
+  .filed
+    = f.label :avatar
+    = f.file_field :avatar, input_html: { accept: 'image/*' }, id: 'avatar', class: 'text-center'
   .actions
-    = f.submit 'Save'
+    = f.submit 'Сохранить'

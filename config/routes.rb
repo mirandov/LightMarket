@@ -6,12 +6,25 @@ Rails.application.routes.draw do
   devise_for :users
   resources :shipments
   resources :bags
-  resources :products
-  resources :subcategories
-  resources :categories
+  resources :products do
+    collection do
+      get 'show_admin'
+    end
+  end
+  resources :subcategories do
+    collection do
+      get 'show_admin'
+    end
+  end
+  resources :categories do
+    collection do
+      get 'show_admin'
+    end
+  end
   resources :contacts, only: [:index, :show]
   resources :deliveries, only: [:index, :show]
   resources  :descriptions, only: [:index, :show]
+  resources :admin_panels
   resources :mains, only: [:index, :show]
   root :to => 'mains#index'
   # The priority is based upon order of creation: first created -> highest priority.

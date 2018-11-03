@@ -1,0 +1,72 @@
+.product-model
+  .container
+    .product-price1
+      %br
+      %br
+      %h2 Админка
+      %br
+      %br
+      %br
+      %br
+      %h2
+        .header-field-title
+          = 'Категории'
+          =link_to '+', new_category_path,class: 'btn-primary btn-sm'
+      %table.table.table-hover
+        %thead
+          %tr
+            %th= Category.human_attribute_name(:name)
+            %th
+            %th
+            %th
+
+        %tbody
+          - @categories.each do |cat|
+            %tr
+              %td= cat.name
+              %td= link_to 'Просмотр', show_admin_categories_path(id: cat.id), class: 'btn-primary btn-sm'
+              %td= link_to 'Редактировать', edit_category_path(cat), class: 'btn btn-warning btn-sm'
+              %td= link_to 'Удалить', cat, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-danger btn-sm'
+      %br
+      %br
+      %h2
+        .header-field-title
+          = 'Подкатегории'
+          =link_to '+', new_subcategory_path,class: 'btn-primary btn-sm'
+      %table.table.table-hover
+        %thead
+          %tr
+            %th= Subcategory.human_attribute_name(:name)
+            %th
+            %th
+            %th
+
+        %tbody
+          - @subcategories.each do |cat|
+            %tr
+              %td= cat.name
+              %td= link_to 'Просмотр', show_admin_subcategories_path(id: cat.id), class: 'btn-primary btn-sm'
+              %td= link_to 'Редактировать', edit_subcategory_path(cat), class: 'btn btn-warning btn-sm'
+              %td= link_to 'Удалить', cat, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-danger btn-sm'
+      %br
+      %br
+      %h2
+        .header-field-title
+          = 'Товары'
+          =link_to '+', new_product_path,class: 'btn-primary btn-sm'
+      %table.table.table-hover
+        %thead
+          %tr
+            %th= Product.human_attribute_name(:name)
+            %th
+            %th
+            %th
+
+        %tbody
+          - @products.each do |cat|
+            %tr
+              %td= cat.name
+              %td= link_to 'Просмотр', show_admin_products_path(id: cat.id), class: 'btn-primary btn-sm'
+              %td= link_to 'Редактировать', edit_product_path(cat), class: 'btn btn-warning btn-sm'
+              %td= link_to 'Удалить', cat, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-danger btn-sm'
+-
