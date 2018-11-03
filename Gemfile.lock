@@ -39,18 +39,22 @@ GEM
     airbrussh (1.3.0)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (6.0.4)
+    bcrypt (3.1.12)
     better_errors (2.5.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
+    bitmask_attributes (1.0.0)
+      activerecord (>= 3.1)
     bootstrap-multiselect-rails (0.9.9)
       rails (>= 4.0.0)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     builder (3.2.3)
     byebug (10.0.2)
+    cancan (1.6.10)
     capistrano (3.11.0)
       airbrussh (>= 1.0.0)
       i18n
@@ -78,6 +82,12 @@ GEM
     crass (1.0.4)
     daemons (1.2.6)
     debug_inspector (0.0.3)
+    devise (4.5.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
     enum_help (0.0.17)
       activesupport (>= 3.0.0)
     erubi (1.7.1)
@@ -132,6 +142,7 @@ GEM
     net-ssh (5.0.2)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    orm_adapter (0.5.0)
     paperclip (6.1.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
@@ -176,6 +187,9 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     ruby_parser (3.11.0)
       sexp_processor (~> 4.9)
     sass (3.6.0)
@@ -220,6 +234,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.7)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -227,14 +243,17 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  bitmask_attributes
   bootstrap-multiselect-rails
   bootstrap-sass (~> 3.2.0)
   byebug
+  cancan
   capistrano
   capistrano-bundler
   capistrano-rails
   capistrano-rbenv (~> 2.0)
   coffee-rails (~> 4.1.0)
+  devise
   enum_help
   haml (>= 4.0.0)
   haml-rails (>= 0.5)
