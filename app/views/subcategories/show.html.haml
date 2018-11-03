@@ -24,18 +24,27 @@
             %li= s
 
         -# %p.para= @subcategory.specifications
+
 .product
   .container
     .product-price1
       .top-sing
         .col-md-7.single-top
-          %ul.slides
-            %li{"data-thumb" => image_tag(@subcategory.avatar.url)}
-              .thumb-image
-                %img= image_tag(@subcategory.avatar.url)
+          :javascript
+            $(window).load(function() {
+              $.fn.lightspeedBox();
+            });
 
-
-
+          .block
+            .element
+              %a.lsb-preview{href: asset_url(@subcategory.avatar.url)}
+                %img= image_tag(@subcategory.avatar.url(:medium))
+            .element
+              %a.lsb-preview{href: asset_url(@subcategory.avatar.url)}
+                %img= image_tag(@subcategory.avatar.url(:medium))
+            .element
+              %a.lsb-preview{href: asset_url(@subcategory.avatar.url)}
+                %img= image_tag(@subcategory.avatar.url(:medium))
         .col-md-5.single-top-in.simpleCart_shelfItem
           .single-para
             %h4= @subcategory.name

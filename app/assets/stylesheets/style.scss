@@ -234,7 +234,23 @@ h1.b1, h2.b2, h3.b3 {
   background-size: cover;
   min-height: 355px;
 }
+.gellary {
+  border: 3px solid black
 
+}
+.block {
+  height: 600px;
+  padding: 0;
+  width: 400px;
+  font-size: 14px;
+  .element {
+    margin: 0px 3px 3px 0px;
+    padding: 0px 0px 0px 0px;
+    float: left;
+    height: 200px;
+    width: 180px;
+  }
+}
 .rslides {
   position: relative;
   list-style: none;
@@ -1392,7 +1408,14 @@ p.prod-desc {
   width: 32%;
   margin-right: 5em;
 }
-
+.thumb-image12 {
+  margin:0 0 0 10;
+  width: 150px;
+  padding: 1em;
+  > img {
+    width: 100%;
+  }
+}
 .thumb-image {
   width: 323px;
   padding: 1em;
@@ -1400,7 +1423,44 @@ p.prod-desc {
     width: 100%;
   }
 }
+body {
+	margin:0;
+}
 
+.image {
+	margin:30px;
+	float:left;
+	cursor:pointer;
+	max-height:100px;
+}
+
+.popup {
+	position: absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.4);
+	position:absolute;
+	z-index:1;
+	height:100%;
+	width:100%;
+}
+
+
+.popup_img {
+	position: relative;
+	margin:0 auto;
+	z-index:2;
+	max-height:94%;
+	max-width:94%;
+	margin:1% 0 0 0;
+}
 .single-top-in {
   width: 61%;
 }
