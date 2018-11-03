@@ -85,7 +85,9 @@ namespace :deploy do
       end
     end
   end
-
+  task :seed do
+    run "cd #{current_path}; rake db:seed RAILS_ENV=#{rails_env}"
+  end
   desc 'Restart application'
   task :thin_restart do
     on roles(:app), in: :sequence, wait: 5 do

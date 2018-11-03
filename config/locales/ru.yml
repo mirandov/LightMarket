@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    attributes:
+      category:
+        description: Описание
+        specifications: Эксплуатационные характеристики
+        area:        Область применения
+      product:
+        name:       Наименование
+        size:       Размер
+        led_count:  Кол-во LED
+        color_light: Цвет
+        price:   Цена

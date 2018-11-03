@@ -27,32 +27,32 @@
 %br
 .col-md-12.about-us
   %h3.text-center
-    %a{:href => products_path}= "Новогодние украшения"
+    %a{:href => subcategories_path}= "Новогодние украшения"
 %script{:src => "bootstrap.js"} :cdata
 .items
   .container
     .items-sec
       .col-md-3.feature-grid
         %a{:href => subcategories_path(cat: 1)}
-          %img= image_tag('3.png')
+          %img= image_tag('dur.png')
           .arrival-info
             %h4= Category.find(1).name
             %p= Category.find(1).name
       .col-md-3.feature-grid
-        %a{:href => subcategories_path(cat: 2)}
-          %img= image_tag('3.png')
-          .arrival-info
-            %h4= Category.find(2).name
-            %p= Category.find(2).name
-      .col-md-3.feature-grid
         %a{:href => subcategories_path(cat: 3)}
-          %img= image_tag('3.png')
+          %img= image_tag('zan.png')
           .arrival-info
             %h4= Category.find(3).name
             %p= Category.find(3).name
       .col-md-3.feature-grid
         %a{:href => subcategories_path(cat: 4)}
-          %img= image_tag('3.png')
+          %img= image_tag('dred.png')
+          .arrival-info
+            %h4= Category.find(4).name
+            %p= Category.find(4).name
+      .col-md-3.feature-grid
+        %a{:href => subcategories_path(cat: 5)}
+          %img= image_tag('set.png')
           .arrival-info
             %h4= Category.find(5).name
             %p= Category.find(5).name

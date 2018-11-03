@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @shipment.name
+%p
+  %b Size:
+  = @shipment.size
+%p
+  %b Led count:
+  = @shipment.led_count
+%p
+  %b Color light:
+  = @shipment.color_light
+%p
+  %b Price:
+  = @shipment.price
+%p
+  %b Subcategory:
+  = @shipment.subcategory
+
+= link_to 'Edit', edit_shipment_path(@shipment)
+\|
+= link_to 'Back', shipments_path

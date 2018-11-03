@@ -1,12 +1,82 @@
-%p#notice= notice
+- cat = @subcategory.category
+.product-model
+  .container
+    %br
+    %h2= cat.name
+    %br
+    -if cat.description.present?
+      %h4.text-center= cat.name + " - " + cat.description
+      %br
+      - cat.specifications.split('|').each_with_index do |s, i|
+        -if i == 0
+          %h4.bold= s +":"
+          %br
+        - else
+          .prdt-info-grid1
+            %ul
+              %li= s
+      %br
+      %h4.bold= Category.human_attribute_name(:area) + ":"
+      %br
+      .prdt-info-grid1
+        - cat.area.split('|').each do |s|
+          %ul
+            %li= s
 
-%p
-  %b Name:
-  = @subcategory.name
-%p
-  %b Category:
-  = @subcategory.category
+        -# %p.para= @subcategory.specifications
+.product
+  .container
+    .product-price1
+      .top-sing
+        .col-md-7.single-top
+          %ul.slides
 
-= link_to 'Edit', edit_subcategory_path(@subcategory)
-\|
-= link_to 'Back', subcategories_path
+
+        .col-md-5.single-top-in.simpleCart_shelfItem
+          .single-para
+            %h4= @subcategory.name
+            -# %p.para= @subcategory.specifications
+            .prdt-info-grid
+              %ul
+                - @subcategory.specifications.split('|').each do |s|
+                  %li= s
+                -# %li= @subcategory.color_light
+        %table.table.table-hover
+          %thead
+            %tr
+              %th= Product.human_attribute_name(:name)
+              %th= Product.human_attribute_name(:size)
+              %th= Product.human_attribute_name(:led_count)
+              %th= Product.human_attribute_name(:color_light)
+              %th= Product.human_attribute_name(:price)
+          %tbody
+            - @subcategory.products.each do |product|
+              %tr
+                %td= product.name
+                %td= product.size
+                %td= product.led_count
+                %td{:bgcolor => "#{product.color_light}"}
+                %td= point_to(product.price)
+        %br
+        %br
+        -if @subcategory.shipments.present?
+          %table.table.table-hover
+            %thead
+              %tr
+                %th= Product.human_attribute_name(:name)
+                %th= Product.human_attribute_name(:size)
+                %th= Product.human_attribute_name(:led_count)
+                %th= Product.human_attribute_name(:color_light)
+                %th= Product.human_attribute_name(:price)
+            %tbody
+              - @subcategory.shipments.each do |shipment|
+                %tr
+                  %td= shipment.name
+                  %td= shipment.size
+                  %td= shipment.led_count
+                  %td{:bgcolor => "#{shipment.color_light}"}
+                  %td= point_to(shipment.price)
+
+
+
+        .clearfix

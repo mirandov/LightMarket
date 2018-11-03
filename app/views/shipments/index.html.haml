@@ -1,0 +1,31 @@
+%h1 Listing shipments
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Size
+      %th Led count
+      %th Color light
+      %th Price
+      %th Subcategory
+      %th
+      %th
+      %th
+
+  %tbody
+    - @shipments.each do |shipment|
+      %tr
+        %td= shipment.name
+        %td= shipment.size
+        %td= shipment.led_count
+        %td= shipment.color_light
+        %td= shipment.price
+        %td= shipment.subcategory
+        %td= link_to 'Show', shipment
+        %td= link_to 'Edit', edit_shipment_path(shipment)
+        %td= link_to 'Destroy', shipment, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Shipment', new_shipment_path
