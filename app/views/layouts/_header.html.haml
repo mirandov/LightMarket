@@ -16,17 +16,32 @@
           %li.grid
             %a{:href => contacts_path} Контакты
       /
+
+
+
       .cart.box_1
-        %a{:href => bags_path}
-          .total
-            %span.simpleCart_total
-            (
-            %span#simpleCart_quantity.simpleCart_quantity>
-            )
-          %span.glyphicon.glyphicon-shopping-cart{"aria-hidden" => "true"}
-        %p
-          %a.simpleCart_empty{:href => "javascript:;"} Корзина пуста
-        .clearfix
+        - if user_signed_in?
+          %span
+            #{current_user.email}
+            = link_to 'Выйти', destroy_user_session_path, :method => :delete
+          %br
+          %a{:href => bags_path}
+            .total
+              %span.simpleCart_total
+              (
+              %span#simpleCart_quantity.simpleCart_quantity>
+              )
+            -# %span.glyphicon.glyphicon-shopping-cart{"aria-hidden" => "true"}
+          %p
+            %a.simpleCart_empty{:href => "javascript:;"} Корзина пуста
+          .clearfix
+          .new-line
+
+        - else
+          = link_to 'Войти', new_user_session_path
+          или #{link_to 'Зарегистрироваться', new_user_registration_path}
+
       .clearfix
+
       /
     .clearfix

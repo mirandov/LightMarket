@@ -32,9 +32,10 @@ gem 'uglifier', '~> 3.2'
 # gem 'simple_form'
 # Use nested_form
 # gem 'nested_form'
+gem 'cancan'
 gem 'enum_help'
-
-
+gem 'devise'
+gem 'bitmask_attributes'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap-multiselect-rails'
 # Solves the Turbolinks problem with binds elements https://github.com/kossnocorp/jquery.turbolinks

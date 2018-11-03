@@ -80,6 +80,11 @@ h1.b1, h2.b2, h3.b3 {
   background: white;
   color: #333;
 }
+.cart.box_13 a {
+  background: white;
+  color: #333;
+}
+
 
 /*----*/
 
@@ -131,7 +136,18 @@ h1.b1, h2.b2, h3.b3 {
 .grid_1 img {
   margin-bottom: 1em;
 }
-
+.box_13 {
+  float: right;
+  width: 15%;
+  margin-top: 2em;
+  h3 {
+    color: rgba(113, 111, 111, 1);
+    font-size: 1em;
+    img {
+      margin-left: 100px;
+    }
+  }
+}
 .box_1 {
   float: right;
   width: 15%;

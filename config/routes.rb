@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :users_roles
+  resources :roles
+  get 'persons/profile'
+
+  devise_for :users
   resources :shipments
   resources :bags
   resources :products
