@@ -27,7 +27,3 @@
 // = require jquery.flexisel
 
 // = require imagezoom.js
-
-
-
-// = requirejquery.mousewheel-3.0.4.pack
