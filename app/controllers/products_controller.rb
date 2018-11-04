@@ -1,10 +1,14 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy, :download]
-
+  # load_and_authorize_resource
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if can? :index, Product
+      @products = Product.all
+    else
+      redirect_to mains_path
+    end
   end
 
   # GET /products/1

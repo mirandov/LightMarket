@@ -7,20 +7,21 @@
     %h2 Наши товары
     .col-md-9.product-model-sec
       - @subcategories.each do |p|
+        %a{:href => subcategory_path(p.id)}
+          .product-grid
+            .more-product
+              %span
+            .product-img.b-link-stripe.b-animate-go.thickbox
+              %a{:href => subcategory_path(p.id)}
+                %p= p.name
+              %a{:href => subcategory_path(p.id)}= image_tag(p.avatar0.url) if p.avatar0.exists?
+            .product-info.simpleCart_shelfItem
+              .product-info-cust.prt_name
 
-        .product-grid
-          .more-product
-            %span
-          .product-img.b-link-stripe.b-animate-go.thickbox
-            %p= p.name
-            %a{:href => subcategory_path(p.id)}
-              %img= image_tag(p.avatar0.url) if p.avatar0.exists?
-          .product-info.simpleCart_shelfItem
-            .product-info-cust.prt_name
-              %h4= p.name
 
-              .ofr
+                .ofr
 
+                -# %h4= p.name
             -# %input.item_quantity{:type => "text", :value => "1"}/
             -# %input.item_add.items{:type => "button", :value => "+"}/
             .clearfix

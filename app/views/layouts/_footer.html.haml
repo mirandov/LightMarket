@@ -11,8 +11,8 @@
         %ul.nav-bottom
           - if @categories.present?
             - @categories.each do |c|
-              %li.active
-                %a= c.name
+              %li
+                %a{:href => subcategories_path(cat: c.id)}= c.name
       .col-md-3.ftr-grid
         %h3 Информация
         %ul.nav-bottom
@@ -26,5 +26,5 @@
   .container
     .copy
       %p
-        © 2018 
+        © 2018
     .clearfix
