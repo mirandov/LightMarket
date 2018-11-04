@@ -65,13 +65,33 @@ ActiveRecord::Schema.define(version: 20181103173811) do
 
   create_table "subcategories", force: :cascade do |t|
     t.string   "name"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size",    limit: 8
-    t.datetime "avatar_updated_at"
+    t.string   "avatar0_file_name"
+    t.string   "avatar0_content_type"
+    t.integer  "avatar0_file_size",    limit: 8
+    t.datetime "avatar0_updated_at"
+    t.string   "avatar1_file_name"
+    t.string   "avatar1_content_type"
+    t.integer  "avatar1_file_size",    limit: 8
+    t.datetime "avatar1_updated_at"
+    t.string   "avatar2_file_name"
+    t.string   "avatar2_content_type"
+    t.integer  "avatar2_file_size",    limit: 8
+    t.datetime "avatar2_updated_at"
+    t.string   "avatar3_file_name"
+    t.string   "avatar3_content_type"
+    t.integer  "avatar3_file_size",    limit: 8
+    t.datetime "avatar3_updated_at"
+    t.string   "avatar4_file_name"
+    t.string   "avatar4_content_type"
+    t.integer  "avatar4_file_size",    limit: 8
+    t.datetime "avatar4_updated_at"
+    t.string   "avatar5_file_name"
+    t.string   "avatar5_content_type"
+    t.integer  "avatar5_file_size",    limit: 8
+    t.datetime "avatar5_updated_at"
     t.integer  "category_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.text     "specifications"
   end
 

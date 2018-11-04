@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 r1 = Role.create!(name: 'admin')
 r12 = Role.create!(name: 'user')
 Product.delete_all

@@ -16,4 +16,14 @@ module SubcategoriesHelper
   def category_for_select
     Category.all.map{|elem| [elem.name, elem.id]}
   end
+  def count_avatar(subcategory)
+    count = 0
+    subcategory.avatar0.present? ? count+=1 : count
+    subcategory.avatar1.present? ? count+=1 : count
+    subcategory.avatar2.present? ? count+=1 : count
+    subcategory.avatar3.present? ? count+=1 : count
+    subcategory.avatar4.present? ? count+=1 : count
+    subcategory.avatar5.present? ? count+=1 : count
+    return count
+  end
 end
