@@ -84,7 +84,10 @@
                 %td= product.name
                 %td= product.size
                 %td= product.led_count
-                %td{:bgcolor => "#{product.color_light}"}
+                - if product.color_light == " "
+                  %td{:background => asset_url("multy2.png")}
+                - else
+                  %td{:bgcolor => "#{product.color_light}"}
                 %td= point_to(product.price)
         %br
         %br

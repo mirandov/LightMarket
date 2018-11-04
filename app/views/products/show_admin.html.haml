@@ -19,7 +19,10 @@
               %td= @product.size
             %tr
               %td= Product.human_attribute_name(:color_light)
-              %td{:bgcolor => "#{@product.color_light}"}
+              - if @product.color_light == " "
+                %td{:background => asset_url("multy2.png")}
+              - else
+                %td{:bgcolor => "#{@product.color_light}"}
             %tr
               %td= Product.human_attribute_name(:price)
               %td= point_to(@product.price)
