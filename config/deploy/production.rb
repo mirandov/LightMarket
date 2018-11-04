@@ -12,7 +12,7 @@ role :db,  '89.111.128.37'
 
 set :stage, :production
 set :rails_env, :production
-set :branch, 'master'
+set :branch, 'v0.3'
 
 # Адрес сервера аутентификации
 # set :auth_host, 'dmo.pmtonline.ru:2000'
