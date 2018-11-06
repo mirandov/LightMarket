@@ -78,6 +78,7 @@
               %th= Product.human_attribute_name(:led_count)
               %th= Product.human_attribute_name(:color_light)
               %th= Product.human_attribute_name(:price)
+              %th= "Фото"
           %tbody
             - @subcategory.products.each do |product|
               %tr
@@ -89,6 +90,13 @@
                 - else
                   %td{:bgcolor => "#{product.color_light}"}
                 %td= point_to(product.price)
+                :javascript
+                  $(window).load(function() {
+                    $.fn.lightspeedBox();
+                  });
+                %td
+                  %a.lsb-preview{href: asset_url(product.avatar.url)}
+                    %img= image_tag(product.avatar.url(:medium)) if product.avatar.exists?
         %br
         %br
         -if @subcategory.shipments.present?
