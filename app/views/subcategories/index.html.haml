@@ -14,7 +14,7 @@
             .product-img.b-link-stripe.b-animate-go.thickbox
               %a{:href => subcategory_path(p.id)}
                 %p= p.name
-              %a{:href => subcategory_path(p.id)}= image_tag(p.avatar0.url(:medium)) if p.avatar0.exists?
+              %a{:href => subcategory_path(p.id)}= image_tag(p.avatar0.url(:thumb)) if p.avatar0.exists?
             .product-info.simpleCart_shelfItem
               .product-info-cust.prt_name
 
