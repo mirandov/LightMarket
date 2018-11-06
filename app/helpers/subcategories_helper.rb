@@ -26,4 +26,10 @@ module SubcategoriesHelper
     subcategory.avatar5.present? ? count+=1 : count
     return count
   end
+
+  def template_file
+    # if f = @subcategory.send(filename)
+    "Файл существует: #{@subcategory.avatar0_file_name}"
+    # end
+  end
 end

@@ -5,9 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
 r1 = Role.create!(name: 'admin')
 r12 = Role.create!(name: 'user')
+u = User.create do |admin|
+  admin.email    = 'admin@dmp.com'
+  admin.password = 'qwerty_qwerty'
+  admin.password_confirmation = admin.password
+end
+u.roles << r1
+# UsersRole.create!(user_id: u, role_id: r1)
 Product.delete_all
 Subcategory.delete_all
 Category.delete_all

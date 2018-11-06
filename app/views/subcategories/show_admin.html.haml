@@ -17,6 +17,35 @@
             %tr
               %td= Subcategory.human_attribute_name(:categoty)
               %td= @subcategory.category.name
+        :javascript
+          $(window).load(function() {
+            $.fn.lightspeedBox();
+          });
+        .block
+          - if @subcategory.avatar0.present?
+            .element
+              %a.lsb-preview{href: asset_url(@subcategory.avatar0.url)}
+                %img= image_tag(@subcategory.avatar0.url(:medium)) if @subcategory.avatar0.exists?
+          - if @subcategory.avatar1.present?
+            .element
+              %a.lsb-preview{href: asset_url(@subcategory.avatar1.url)}
+                %img= image_tag(@subcategory.avatar1.url(:medium)) if @subcategory.avatar1.exists?
+          - if @subcategory.avatar2.present?
+            .element
+              %a.lsb-preview{href: asset_url(@subcategory.avatar2.url)}
+                %img= image_tag(@subcategory.avatar2.url(:medium)) if @subcategory.avatar2.exists?
+          - if @subcategory.avatar3.present?
+            .element
+              %a.lsb-preview{href: asset_url(@subcategory.avatar3.url)}
+                %img= image_tag(@subcategory.avatar3.url(:medium)) if @subcategory.avatar3.exists?
+          - if @subcategory.avatar4.present?
+            .element
+              %a.lsb-preview{href: asset_url(@subcategory.avatar4.url)}
+                %img= image_tag(@subcategory.avatar4.url(:medium)) if @subcategory.avatar4.exists?
+          - if @subcategory.avatar5.present?
+            .element
+              %a.lsb-preview{href: asset_url(@subcategory.avatar5.url)}
+                %img= image_tag(@subcategory.avatar5.url(:medium)) if @subcategory.avatar5.exists?
         %br
         %br
         .text-center

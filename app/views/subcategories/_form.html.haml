@@ -1,3 +1,5 @@
+-# = raise @subcategory
+
 = form_for @subcategory do |f|
   - if @subcategory.errors.any?
     #error_explanation
@@ -15,23 +17,40 @@
   .field
     = f.label "#{Subcategory.human_attribute_name(:category)}"
     = f.select :category_id, category_for_select
+
   .filed
     = f.label :avatar
-    = f.file_field :avatar0, input_html: { accept: 'image/*' }, id: 'avatar', class: 'text-center'
+    -# - if f.avatar0.present?
+    -#   - raise
+    %span.input-form.input-text{ data: { default: 'Выберите файл' } }
+      = f.object.avatar0_file_name
+    = f.file_field :avatar0, input_html: { value: f.object.avatar0_file_name}, id: 'avatar0', class: 'text-center'
   .filed
     = f.label :avatar
-    = f.file_field :avatar1, input_html: { accept: 'image/*' }, id: 'avatar', class: 'text-center'
+    %span.input-form.input-text{ data: { default: 'Выберите файл' } }
+      = f.object.avatar1_file_name
+
+    = f.file_field :avatar1, input_html: { accept: 'image/*' }, id: 'avatar1', class: 'text-center'
+
   .filed
     = f.label :avatar
-    = f.file_field :avatar2, input_html: { accept: 'image/*' }, id: 'avatar', class: 'text-center'
+    %span.input-form.input-text{ data: { default: 'Выберите файл' } }
+      = f.object.avatar2_file_name
+    = f.file_field :avatar2, input_html: { accept: 'image/*' }, id: 'avatar2', class: 'text-center'
   .filed
     = f.label :avatar
-    = f.file_field :avatar3, input_html: { accept: 'image/*' }, id: 'avatar', class: 'text-center'
+    %span.input-form.input-text{ data: { default: 'Выберите файл' } }
+      = f.object.avatar3_file_name
+    = f.file_field :avatar3, input_html: { accept: 'image/*' }, id: 'avatar3', class: 'text-center'
   .filed
     = f.label :avatar
-    = f.file_field :avatar4, input_html: { accept: 'image/*' }, id: 'avatar', class: 'text-center'
+    %span.input-form.input-text{ data: { default: 'Выберите файл' } }
+      = f.object.avatar4_file_name
+    = f.file_field :avatar4, input_html: { accept: 'image/*' }, id: 'avatar4', class: 'text-center'
   .filed
     = f.label :avatar
-    = f.file_field :avatar5, input_html: { accept: 'image/*' }, id: 'avatar', class: 'text-center'
+    %span.input-form.input-text{ data: { default: 'Выберите файл' } }
+      = f.object.avatar5_file_name
+    = f.file_field :avatar5, input_html: { accept: 'image/*' }, id: 'avatar5', class: 'text-center'
   .actions
     = f.submit 'Сохранить'

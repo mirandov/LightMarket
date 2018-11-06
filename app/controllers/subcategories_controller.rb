@@ -28,6 +28,7 @@ class SubcategoriesController < ApplicationController
 
   # GET /subcategories/1/edit
   def edit
+    # raise 
   end
 
   # POST /subcategories
@@ -37,7 +38,7 @@ class SubcategoriesController < ApplicationController
 
     respond_to do |format|
       if @subcategory.save
-        format.html { redirect_to admin_panels_path, notice: 'Subcategory was successfully created.' }
+        format.html { redirect_to show_admin_subcategories_path(id:@subcategory.id), notice: 'Subcategory was successfully created.' }
         format.json { render :show, status: :created, location: @subcategory }
       else
         format.html { render :new }
@@ -51,7 +52,7 @@ class SubcategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @subcategory.update(subcategory_params)
-        format.html { redirect_to admin_panels_path, notice: 'Subcategory was successfully updated.' }
+        format.html { redirect_to show_admin_subcategories_path(id:@subcategory.id), notice: 'Subcategory was successfully updated.' }
         format.json { render :show, status: :ok, location: @subcategory }
       else
         format.html { render :edit }
@@ -78,6 +79,7 @@ class SubcategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subcategory_params
+      # raise
       params.require(:subcategory).permit(:name, :category_id, :specifications,
                                           :avatar0,
                                           :avatar1,
