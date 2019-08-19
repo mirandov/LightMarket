@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Description:
+  = @deliver.description
+
+= link_to 'Edit', edit_deliver_path(@deliver)
+\|
+= link_to 'Back', delivers_path

@@ -36,7 +36,7 @@ gem 'cancan'
 gem 'enum_help'
 gem 'devise'
 gem 'bitmask_attributes'
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.2.0.3'
 gem 'bootstrap-multiselect-rails'
 # Solves the Turbolinks problem with binds elements https://github.com/kossnocorp/jquery.turbolinks
 gem 'jquery-turbolinks'

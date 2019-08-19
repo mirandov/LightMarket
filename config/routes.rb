@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :delivers
   resources :users_roles
   resources :roles
   get 'persons/profile'

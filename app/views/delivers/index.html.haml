@@ -1,0 +1,21 @@
+%h1 Listing delivers
+
+%table
+  %thead
+    %tr
+      %th Description
+      %th
+      %th
+      %th
+
+  %tbody
+    - @delivers.each do |deliver|
+      %tr
+        %td= deliver.description
+        %td= link_to 'Show', deliver
+        %td= link_to 'Edit', edit_deliver_path(deliver)
+        %td= link_to 'Destroy', deliver, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Deliver', new_deliver_path

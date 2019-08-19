@@ -1,0 +1,13 @@
+= form_for @deliver do |f|
+  - if @deliver.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@deliver.errors.count, "error")} prohibited this deliver from being saved:"
+      %ul
+        - @deliver.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :description
+    = f.text_area :description
+  .actions
+    = f.submit 'Save'
